@@ -23,14 +23,16 @@ jobs:
         with:
           personal_token: ${{ secrets.ACCESS_TOKEN }}
           publish_dir: dist
-          external_repository: magicLaLa/Magic.me
-          publish_branch: gh_pages
+          external_repository: magicLaLa/magicLaLa.github.io
+          publish_branch: master
+          user_name: "github-actions[bot]"
+          user_email: "github-actions[bot]@users.noreply.github.com"
       - name: Sync to Coding 🔀
         uses: wearerequired/git-mirror-action@v1
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         with:
-          source-repo: "git@github.com:magicLaLa/Magic.me.git"
+          source-repo: "git@github.com:magicLaLa/magicLaLa.github.io.git"
           destination-repo: "git@e.coding.net:s_auto/magic.me/Magic.me.git"
 
 
