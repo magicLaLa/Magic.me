@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+  base: '/Magic.me/',
   title: '人间熙攘，好久不见',
   description: '人间熙攘，好久不见~ Magic 的博客',
   locales: {
