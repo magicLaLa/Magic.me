@@ -25,5 +25,12 @@ jobs:
           publish_dir: dist
           external_repository: magicLaLa/Magic.me
           publish_branch: gh_pages
+      - name: Sync to Coding 🔀
+        uses: wearerequired/git-mirror-action@v1
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        with:
+          source-repo: "git@github.com:magicLaLa/Magic.me.git"
+          destination-repo: "git@e.coding.net:s_auto/magic.me/Magic.me.git"
 
 
