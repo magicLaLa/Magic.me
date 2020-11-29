@@ -14,16 +14,6 @@ module.exports = {
   head: [
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
     ['link', { rel: 'icon', href: '/favicon.ico' }],
-    ["script", {
-      "language": "javascript",
-      "type": "text/javascript",
-      "src": "https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"
-    }],
-    ["script", {
-      "language": "javascript",
-      "type": "text/javascript",
-      "src": "/js/MouseClickEffect.js"
-    }],
   ],
   configureWebpack: {
     resolve: {
@@ -71,5 +61,13 @@ module.exports = {
         clean: true,
       }
     ],
+    [
+      "cursor-effects",
+      {
+        size: 2,
+        shape: ['star'],
+        zIndex: 999999999
+      }
+    ]
   ],
 }

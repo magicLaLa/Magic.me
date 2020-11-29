@@ -8306,6 +8306,11 @@ vuepress-plugin-container@^2.0.2:
     "@vuepress/shared-utils" "^1.2.0"
     markdown-it-container "^2.0.0"
 
+vuepress-plugin-cursor-effects@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-cursor-effects/-/vuepress-plugin-cursor-effects-1.0.0.tgz#47bf74b4fe9fae923b2250ac18d15f5b3fddb6b7"
+  integrity sha512-4W61844jFi0L86wuBmLUnd9FEk32mD/ihcEo0nRTtCq0kkbqBEs02GJ3RkcpgIJmlxz20CrLxhljg3d3DfzC8Q==
+
 vuepress-plugin-disqus@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/vuepress-plugin-disqus/-/vuepress-plugin-disqus-0.2.0.tgz#0a5bde424f81e0185eda36fba23d7ac4cae6ff07"

@@ -8,21 +8,22 @@ on:
       - master
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
-      - name: Checkout
+      - name: Checkout 🛎️
         uses: actions/checkout@master
-      - name: Build and Deploy
-        uses: jenkey2011/vuepress-deploy@master
-        env:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          # 你要操作的目标仓库
-          TARGET_REPO: magicLaLa/Magic.me
-          # 构建结果存储的分支
-          TARGET_BRANCH: gh_pages
-          # 要使用的构建命令
-          BUILD_SCRIPT: yarn && yarn build
-          # 构建结果存储目录
-          BUILD_DIR: dist
+      # 构建静态文件
+      - name: Install and Build 🔧
+        run: |
+          npm install yarn
+          yarn
+          yarn build
+      - name: Deploy 🚀
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.ACCESS_TOKEN }}
+          publish_dir: dist
+          external_repository: magicLaLa/Magic.me
+          publish_branch: gh_pages
 
 
