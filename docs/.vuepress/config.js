@@ -32,7 +32,14 @@ module.exports = {
     },
     nav: [
       { text: "Home", link: "/", icon: "reco-home" },
-      { text: 'TimeLine', link: '/timeline/', icon: 'reco-date' }
+      { text: 'TimeLine', link: '/timeline/', icon: 'reco-date' },
+      {
+        text: 'GitHub',
+        items: [
+          { text: 'Github', link: 'https://github.com/magicLaLa/Magic.me' },
+          { text: 'Before', link: 'https://github.com/magicLaLa/blog' }
+        ],
+      }
     ],
     // 博客配置
     blogConfig: {
