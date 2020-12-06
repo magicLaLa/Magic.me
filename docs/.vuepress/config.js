@@ -13,11 +13,12 @@ module.exports = {
   head: [
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
     ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['script', { charset: 'utf-8', crossorigin: 'anonymous', src: '/js/rainyday.js' }]
   ],
   configureWebpack: {
     resolve: {
       alias: {
-        '@GitPic': path.join(__dirname, '..', 'Images/git'),
+        '@Images': path.join(__dirname, '..', 'Images'),
       }
     }
   },
@@ -29,6 +30,7 @@ module.exports = {
     valineConfig: {
       appId: '00gpzYqWJUlWq8ncDRIDwBV0-gzGzoHsz',
       appKey: 'E6qzasI6E0Izj0jBLUBWBAhc',
+      placeholder: '叽里呱啦~'
     },
     nav: [
       { text: "Home", link: "/", icon: "reco-home" },
@@ -57,7 +59,8 @@ module.exports = {
     subSidebar: 'auto',
     sidebar: require('../utils/sidebarConf'),
     startYear: '2017',
-    author: 'Magic'
+    author: 'Magic',
+    codeTheme: 'okaidia'
   },
   plugins: [
     [
@@ -73,6 +76,14 @@ module.exports = {
         size: 2,
         shape: ['star'],
         zIndex: 999999999
+      }
+    ],
+    [
+      "ribbon",
+      {
+        size: 90,
+        opacity: 0.8,
+        zIndex: -1
       }
     ]
   ],

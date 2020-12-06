@@ -1,10 +1,39 @@
 ---
 pageClass: custom-home-class
 home: true
-heroText: 人间熙攘，好久不见
+heroImage: /bg/home-bg.jpg
+heroImageStyle: {
+  width: 100%,
+  height: 100%,
+  display: block,
+  margin: 0,
+}
 tagline: ''
-bgImage: '/bg/home-bg.jpg'
+bgImage: ''
 bgImageStyle: {
-  height: '340px'
+  height: '350px'
 }
 ---
+
+<script>
+window.onload = function() {
+  function run() {
+    var image = document.querySelector('.home-blog .hero .hero-img');
+    image.onload = function () {
+      var engine = new RainyDay({
+        image: this,
+        blur: 0,
+        opacity: 0.7,
+        parentElement: document.querySelector('.home-blog .hero'),
+      });
+      engine.rain([
+          [2, 1, 0.88],
+          [2, 3, 0.9],
+      ], 80);
+    };
+    image.crossOrigin = 'anonymous';
+    image.src = '/bg/home-bg.jpg';
+  }
+  run();
+}
+</script>

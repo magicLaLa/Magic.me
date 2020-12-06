@@ -11,7 +11,7 @@ tags:
 
 ## git工作流
 
-![pic](~@GitPic/git-flow.png)
+![pic](~@Images/git/git-flow.png)
 
 ## git相关
 
@@ -36,7 +36,7 @@ commitizen init cz-conventional-changelog --save --save-exact
 
 3.以后，凡是用到git commit命令，一律改为使用git cz。这时，就会出现选项，用来生成符合格式的 Commit message
 
-![Alt text](~@GitPic/add-commit.png)
+![Alt text](~@Images/git/add-commit.png)
 
 * 更多关于`Commit message 和 Change log 编写指南`可以到[Commit message 和 Change log 编写指南](http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)查看...
 
@@ -178,7 +178,7 @@ Add-PoshGitToProfile -AllHosts
   [官网](https://www.sourcetreeapp.com/)
   基本使用: <https://www.cnblogs.com/tian-xie/p/6264104.html>
 
-  ![SourceTree](~@GitPic/sourcetree.png)
+  ![SourceTree](~@Images/git/sourcetree.png)
 
 ## git常见错误处理
 
@@ -186,7 +186,7 @@ Add-PoshGitToProfile -AllHosts
 
 * git 遇到这个错误时，需要把 当前项目下 .git -> index.lock 这个文件删除即可
 
-![Alt text](~@GitPic/1323758-20180206172305857-1172749425.png)
+![Alt text](~@Images/git/1323758-20180206172305857-1172749425.png)
 
 ### git merge 冲突，提示You have not concluded your merge (MERGE_HEAD exists)
 
@@ -202,16 +202,16 @@ git reset --merge [prior git versions]
 
 1. 打开电脑控制面板：
 
-![控制面板](~@GitPic/kzmb.png)
+![控制面板](~@Images/git/kzmb.png)
 
 2. 选择用户账户-->管理你的凭据
 
-![电脑凭证](~@GitPic/dnpz.png)
+![电脑凭证](~@Images/git/dnpz.png)
 
 3. 可以在下方用红框的地方修改
 
-![修改](~@GitPic/pz.png)
-![修改](~@GitPic/xg.png)
+![修改](~@Images/git/pz.png)
+![修改](~@Images/git/xg.png)
 
 ### git push 到 github 上报错：fatal: HttpRequestException encountered
 
@@ -269,7 +269,7 @@ fatal: could not read Username for 'https://github.com': No error
 
 * 导致：`fatal: HttpRequestException encountered` 这个的原因是github禁用了TLS1.0/1.1协议，[github禁用了对弱加密的支持](https://githubengineering.com/crypto-deprecation-notice/)，我们可以对 [git for windows](https://github.com/git-for-windows/git/releases) 更新到最新的版本或者去更新[windows的git凭证管理器](https://github.com/Microsoft/Git-Credential-Manager-for-Windows)，这样就可以了。
 
-![pic](~@GitPic/1323758-20180712112225701-1623212436.png)
+![pic](~@Images/git/1323758-20180712112225701-1623212436.png)
 
 ### git merge 冲突，提示You have not concluded your merge (MERGE_HEAD exists)
 

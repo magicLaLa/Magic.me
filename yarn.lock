@@ -8339,6 +8339,11 @@ vuepress-plugin-mailchimp@^1.4.1:
     jsonp "^0.2.1"
     query-string "^6.9.0"
 
+vuepress-plugin-ribbon@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-ribbon/-/vuepress-plugin-ribbon-1.0.2.tgz#2845674049939e1b2a4d285abc685abb8b5490ed"
+  integrity sha512-r9X3994eNsQtf/t7ArfuJsl8SUtuJtEMuIKfRWoUV2XLg7N43ypUnKwCSXkLXSVeBBnM4v9X7QwJJLqbFlMQ9A==
+
 vuepress-plugin-sitemap@^2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/vuepress-plugin-sitemap/-/vuepress-plugin-sitemap-2.3.1.tgz#51298aca77a5de96396fdbd1103e1637dd61ae6a"

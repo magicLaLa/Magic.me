@@ -1,4 +1,4 @@
-$accentExtendsColor = #3F9FA2
+$accentExtendsColor = #666BAD
 
 .custom-home-class .home-blog .description {
   display: none;
@@ -10,18 +10,34 @@ $accentExtendsColor = #3F9FA2
 
 .home-blog {
   .hero {
+    padding: 0 !important;
+    .hero-img {
+      max-width: none !important;
+      position: absolute !important;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
     h1 {
       font-size: 1.5rem !important;
-      position relative
       color: #fff;
     }
   }
 }
 
 @media (max-width: 719px) {
-  .home-blog .home-blog-wrapper .info-wrapper {
-    margin-left: 0;
-    margin-top: 20px;
+  .home-blog {
+    .hero {
+      .hero-img {
+        max-height: none !important;
+      }
+    }
+    .home-blog-wrapper {
+      .info-wrapper {
+        margin-left: 0;
+        margin-top: 20px;
+      }
+    }
   }
 }
 
@@ -46,20 +62,20 @@ $accentExtendsColor = #3F9FA2
 }
 
 .info-wrapper:hover {
-  box-shadow: 0 2px 16px 0 rgba(63,159,162, 0.3) !important;
+  box-shadow: 0 2px 16px 0 rgba(102,107,173, 0.3) !important;
 }
 
 .abstract-wrapper {
   .abstract-item {
     position: relative;
     &:hover {
-      box-shadow: 0 2px 16px 0 rgba(63,159,162, 0.3) !important;
+      box-shadow: 0 2px 16px 0 rgba(102,107,173, 0.3) !important;
       &::before {
         position: absolute;
         content: '';
         left: 0; top: 0; right: 0; bottom: 0;
         border: 2px solid $accentExtendsColor;
-        animation: borderAround 1.5s infinite linear;
+        animation: borderAround 2s infinite linear;
       }
     }
   }
@@ -73,10 +89,8 @@ $accentExtendsColor = #3F9FA2
 }
 
 .page {
-  .custom-block {
-    &.tip {
-       display:  none;
-    }
+  .abstract-box {
+    display:  none;
   }
   .page-title {
     background-image: url('/bg/home-bg.jpg');
